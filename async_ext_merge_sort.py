@@ -1,10 +1,10 @@
 import asyncio
 import time
-out_file = 'sorted.txt'
-NumList = []
+
 
 async def main():
-
+    out_file = 'sorted.txt'
+    NumList = []
     in_files = ['unsorted_1.txt', 'unsorted_2.txt', 'unsorted_3.txt', 'unsorted_4.txt', 'unsorted_5.txt',
                 'unsorted_6.txt', 'unsorted_7.txt', 'unsorted_8.txt',
                 'unsorted_9.txt', 'unsorted_10.txt']

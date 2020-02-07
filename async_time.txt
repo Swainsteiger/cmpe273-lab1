@@ -1,1 +1,1 @@
-program took 0.707726001739502 to finish
+program took 0.10644102096557617 to finish

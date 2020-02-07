@@ -2,11 +2,6 @@ import asyncio
 import time
 out_file = 'sorted.txt'
 NumList = []
-async def task(i):
-    with open(out_file, 'w') as fout:
-        for num in NumList:
-            fout.write(str(num) + '\n')
-
 
 async def main():
 
@@ -18,15 +13,13 @@ async def main():
         with open(file) as fin:
             for line in fin:
                 NumList.append(int(line.strip()))
-    coroutines = list()
     for i in range(len(NumList)):
         for j in range(1, len(NumList) - i):
             if NumList[j - 1] > NumList[j]:
                 (NumList[j - 1], NumList[j]) = (NumList[j], NumList[j - 1])
-    for i in NumList:
-        coroutines.append(task(i))
-
-    await asyncio.gather(*coroutines)
+    with open(out_file, 'w') as fout:
+        for num in NumList:
+            fout.write(str(num) + '\n')
 
 start = time.time()
 asyncio.run(main())

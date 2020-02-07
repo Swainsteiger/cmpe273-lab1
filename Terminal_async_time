@@ -1,0 +1,5 @@
+(venv) MacBook-Pro:cmpe273-lab1 animesh$ time python3 async_ext_merge_sort.py 
+
+real    0m0.168s
+user    0m0.142s
+sys     0m0.020s
